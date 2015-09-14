@@ -1,0 +1,14 @@
+{
+  "name": "RequireJS Starter",
+  "version": "1.0.0",
+  "dependencies": {
+    "backbone-amd": "latest",
+    "backbone.marionette": "latest",
+    "backbone.marionette.handlebars": "latest",
+    "jquery": "latest",
+    "require-handlebars-plugin": "~1.0.0",
+    "requirejs": "latest",
+    "slick-carousel": "~1.5.8",
+    "underscore-amd": "latest"
+  }
+}

@@ -1,0 +1,15 @@
+<style>
+    #carousel img{width:100%}
+</style>
+<div id="carousel">
+    {{#each carousel.items}}
+        <div><img src="{{this.resource}}"/></div>
+    {{/each}}
+</div>
+
+<div id="carousel-nav" class="show-for-medium-up">
+    {{#each carousel.items}}
+        <div><img class="carousel-small" src="{{this.resource}}"/></div>
+    {{/each}}
+</div>
+
