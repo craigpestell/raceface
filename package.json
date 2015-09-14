@@ -1,5 +1,5 @@
 {
-  "name": "Race Face client",
+  "name": "rfClient",
   "version": "1.0.0",
   "description": ".",
   "main": "Gruntfile.js",
@@ -9,6 +9,7 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-rjs": "^0.1.0",
+    "gulp-ruby-sass": "^2.0.3",
     "gulp-sass": "^2.0.4"
   },
   "scripts": {

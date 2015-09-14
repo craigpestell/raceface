@@ -1,7 +1,11 @@
 'use strict'
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var rjs = require('gulp-rjs');
+
+var paths = {
+    scss: ['app/scripts/vendor/foundation/scss/*.scss']
+}
 
 gulp.task('scripts', function(){
     gulp.src('app/scripts/**/*.js')
@@ -25,16 +29,11 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('sass', function() {
-        gulp.src('app/scripts/vendor/**/*.scss')
-                .pipe(sass({
-                        //includePaths: ['app/scripts/vendor/foundation/scss/']
-                }))
-                .pipe(gulp.dest('app/scripts/vendor'));
-        gulp.src('app/css/*.scss')
-            .pipe(sass())
-            .pipe(gulp.dest('./dist/css'));
+    return sass(paths.scss)
+        .on('error', sass.logError)
+        .pipe(gulp.dest('app/scripts/vendor/foundation/css'))
 });
 
 gulp.task('sass:watch', function () {
-        gulp.watch('./app/**/*.scss', ['sass']);
+        gulp.watch(paths.scss, ['sass']);
 });
