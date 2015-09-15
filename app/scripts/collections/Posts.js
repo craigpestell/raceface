@@ -5,7 +5,7 @@ define([
     'models/Post'
 ], function(_, Backbone, PostModel){
     var PostCollection = Backbone.Collection.extend({
-        url: 'http://localhost:3001/api/posts',
+        url: 'http://45.55.25.163:8001/api/posts',
         model: PostModel
     });
     // You don't usually return a collection instantiated

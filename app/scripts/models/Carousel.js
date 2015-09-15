@@ -4,7 +4,7 @@ define([
 ], function(_, Backbone){
     return Backbone.Model.extend({
         url: function(){
-            return 'http://localhost:3001/api/carousels/' + this.slug;
+            return 'http://45.55.25.163/:8001/api/carousels/' + this.slug;
         },
 
         initialize: function(models, options){
